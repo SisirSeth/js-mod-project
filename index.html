@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="screen">
+        <div class="scoreboard">
+            <div class="rps">
+                <p>ROCK</p>
+                <p>PAPER</p>
+                <p>SCISSORS</p>
+            </div>
+            <div class="scores">
+                <div class="computerScore">
+                    <h2>COMPUTER</h2>
+                    <h2>SCORE</h2>
+                    <h1 id="compScore">0</h1>
+                </div>
+                <div class="yourScore">
+                    <h2>YOUR</h2>
+                    <h2>SCORE</h2>
+                    <h1 id="urScore">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="playerChoices">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="symbol rock">
+                <img id="rock" onclick="choosingYourChoise('rock')" src="rocks.png" alt="Rock symbol">
+            </div>
+            <div class="symbol scissor">
+                <img id="scissor" onclick="choosingYourChoise('scissors')" src="scissorss.png" alt="Scissors symbol">
+            </div>
+            <div class="symbol paper">
+                <img id="paper" onclick="choosingYourChoise('paper')" src="papers.png" alt="Paper symbol">
+            </div>
+        </div>
+        <div id="gameRules" class="gameRules">
+            <h4>Game Rules</h4>
+            <button class="closeButton">X</button>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <div>
+                <button id="openRules" class="rules">RULES</button>
+            </div>
+            <div>
+                <button class="next">NEXT</button>
+            </div>
+        </div>
+        
+        <div class="result">
+            <div class="ursymbol">
+                <h2>YOU PICKED</h2>
+                <div class="symbolContainer">
+                    <div class="ring3">
+                        <div class="ring2">
+                            <div class="ring1">
+                                <img class="urImg" id="paper" src="papers.png" alt="Paper symbol">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="answer">YOU WIN</div>
+                <div id="againstPC">AGAINST PC</div>
+                <div class="playAgain" onclick="playAgain()">PLAY AGAIN</div>
+            </div>
+            <div class="compsymbol">
+                <h2>PC PICKED</h2>
+                <div class="symbolContainer">
+                    <div class="ring6">
+                        <div class="ring5">
+                            <div class="ring4">
+                                <img class="compImg" id="rock" src="rocks.png" alt="Rock symbol">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="win">
+        <img id="star" src="Group 5.png" alt="Stars image">
+        <img id="trophy" src="Vector.png" alt="Trophy image">
+        <h1 class="hurray">HURRAY!!</h1>
+        <h1 class="won">YOU WON THE GAME</h1>
+        <div id="gameRules" class="gameRules newGameRules">
+            <h4>Game Rules</h4>
+            <button class="closeButton newCloseButton">X</button>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <button id="openRules" class="rules newRules">RULES</button>
+        <div class="playAgain newPlayAgain" onclick="playAgain()">PLAY AGAIN</div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
